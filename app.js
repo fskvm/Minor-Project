@@ -1,5 +1,6 @@
 // Check for NODE_ENV is not set on "production".
-if (process.env.NODE_ENV != "production") require("dotenv").config();
+// if (process.env.NODE_ENV !== "production")  i remove this line.
+require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -28,28 +29,26 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-const cloudDatabaseUrl = process.env.ATLAS_DB_URL; // Connection link of Cloud MongoDB (Atlas) Database.
+const cloudDatabaseUrl = process.env.MONGO_URL; // Connection link of Cloud MongoDB (Atlas) Database.
 
 // MongoDB session store for 'Connect' and 'Express'.
 const store = MongoStore.create({
     mongoUrl: cloudDatabaseUrl,
     crypto: {
-        secret: process.env.SECRET,
+        secret: process.env.SECRET || "defaultSecret",
     },
     touchAfter: 24 * 3600,
 });
 
 // Handling Error if session store fails.
-store.on("error", () => {
-    console.log("ERROR in MONGO SESSION STORE!");
-    console.log(error);
-    console.error(error);
+store.on("error", (error) => {
+    console.log("ERROR in MONGO SESSION STORE!", error);
 });
 
 // express-session parameters.
 const sessionOptions = {
     store: store,
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || "defaultSecret",
     resave: false,
     saveUninitialized: true,
     cookie: {
