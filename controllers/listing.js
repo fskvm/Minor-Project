@@ -3,7 +3,7 @@ const Listing = require("../models/listing.js");
 // Index Route Callback to see all Listings.
 module.exports.index = async (req, res) => {
     const allListings = await Listing.find({}); //To extract all listing data from database.
-    res.render("../views/listings/index.ejs", { listings: allListings }); //Passing all listings to index.ejs with key name as `listings`.
+    res.render("../views/listings/index.ejs", { allListings : allListings }); //Passing all listings to index.ejs with key name as `listings`.
 };
 
 // New Form to Create new Listings.

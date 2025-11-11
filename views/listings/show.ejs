@@ -21,7 +21,7 @@
                 <p class="card-text"><%=listing.location%>, <%=listing.country%>.</p>
 
                 <!-- Checking for Authorized User -->
-                <% if (currentUser && currentUser._id.equals(listing.owner._id)) { %>
+                <% if (currentUser && listing.owner && currentUser._id.equals(listing.owner._id)) { %>
                 <form
                     action="/listings/<%= listing._id%>?_method=DELETE"
                     method="post"
@@ -31,12 +31,16 @@
                 </form>
                 <% } %>
                 <hr />
-                <small class="card-text">Hosted by <%=listing.owner.username%></smal>
+                <% if (listing.owner) { %>
+                    <small class="card-text">Hosted by <%= listing.owner.username %></small>
+                <% } else { %>
+                    <small class="card-text"><i>Host information not available</i></small>
+                <% } %>
             </div>
         </div>
 
         <!-- Rating Section -->
-        <% if (currentUser) {%> <!-- Checking User is Authorized to create Review or not.-->
+    <% if (currentUser) {%>
         <hr />
         <div class="col col-10 offset-1 mb-3">
             <h4 class="mb-0 fs-4"><b>Rate this place</b></h4>

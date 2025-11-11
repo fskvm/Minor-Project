@@ -19,6 +19,7 @@ const User = require("./models/user.js");
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const Listing = require("./models/listing");
 
 // Setting for project requirements.
 const app = express();
@@ -29,6 +30,10 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
+// app.get("/listings", async (req, res) => {
+//     const allListings = await Listing.find({});
+//     res.render("/listings/index.ejs", {allListings});
+// });
 const cloudDatabaseUrl = process.env.MONGO_URL; // Connection link of Cloud MongoDB (Atlas) Database.
 
 // MongoDB session store for 'Connect' and 'Express'.

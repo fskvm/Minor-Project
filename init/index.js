@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const initData = require("./data.js"); // Importing data from data.js file.
 const Listing = require("../models/listing.js"); // Importing Listing model from models folder.
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/Explore-Hut";
+const MONGO_URL = "mongodb+srv://akhtar2lead_db_user:jVFfsnnvyTkwHpnM@cluster0.jbudvlo.mongodb.net/?appName=Cluster0";
 
 /* Database connectivity setup */
 main()
@@ -27,4 +27,4 @@ const initDB = async () => {
     console.log("Data is initialized.");
 };
 
-initDB();
+initDB()
