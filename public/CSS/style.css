@@ -14,9 +14,10 @@ body {
   height: 5rem;
 }
 
-.fa-compass {
-  color: #ff385c;
-  font-size: 2rem;
+.navbar-logo {
+    width: 200px;
+    height: auto;
+    margin-right: 2.5rem;
 }
 
 .nav-link {
@@ -30,7 +31,7 @@ body {
 .search-box:hover {
   border-color: lightgray;
   box-shadow: 0 0 0.1rem 0.1rem lightgray;
-  background-color: lightgray;
+  background-color: #ebebeb;
 }
 .search-box:focus {
   border-color: lightgray;
@@ -48,13 +49,56 @@ body {
   display: flex;
   align-items: center;
   color: white;
-  background-color: #ff385c;
+  background-color: #144272;
   padding: 0.5rem 0.75rem;
 }
 .search-btn:focus, .fa-magnifying-glass:focus {
-  color: #ff385c;
+  color: #144272;
   background-color: white;
 }
+
+
+.navbar-nav.fw-bold.ms-auto {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.navbar-nav.fw-bold.ms-auto a {
+    border-radius: 50px;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #144272;
+    z-index: 9;
+}
+
+.navbar-nav.fw-bold.ms-auto a:hover {
+    color: #226fc1;
+}
+
+.navbar-nav.fw-bold.ms-auto a::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ebebeb;
+    left: 0;
+    bottom: -100%; /* Start below the link */
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: -1; /* Place it behind the text */
+}
+
+.navbar-nav.fw-bold.ms-auto a:hover::after {
+    bottom: 0; /* Move to fill the link */
+    border-radius: 0;
+}
+
 
 /* Footer */
 .foot-info {
@@ -128,12 +172,12 @@ body {
 
 /* Add New Listing Form */
 .add-new-listing-btn {
-  background-color: #ff385c !important;
+  background-color: #144272 !important;
 }
 
 /* Edit Listing Form */
 .edit-listing-btn {
-  background-color: #ff385c !important;
+  background-color: #144272 !important;
 }
 
 /* Show Listing Page */
