@@ -14,6 +14,8 @@ router.get("/new", isLoggedIn, listingController.newListingForm);
 // New form Route: /listings/:id/edit - To edit listing.
 router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(listingController.editListingForm));
 
+router.get("/category/:category", wrapAsync(listingController.index));
+
 router
     .route("/")
     .get(wrapAsync(listingController.index)) // Index Route: /listings - To see all Listings.

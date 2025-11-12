@@ -1,10 +1,38 @@
 const Listing = require("../models/listing.js");
 
-// Index Route Callback to see all Listings.
 module.exports.index = async (req, res) => {
-    const allListings = await Listing.find({}); //To extract all listing data from database.
-    res.render("../views/listings/index.ejs", {allListings: allListings}); //Passing all listings to index.ejs with key name as `listings`.
+    const { category } = req.query;
+    let filter = {};
+
+    if (category) {
+        filter.category = category;
+    }
+
+    const allListings = await Listing.find(filter);
+
+    // Map category to display name
+    const categoryNames = {
+        'trending': 'Trending',
+        'iconic-cities': 'Iconic Cities',
+        'rooms': 'Rooms',
+        'bed-breakfasts': 'Bed & Breakfasts',
+        'amazing-views': 'Amazing Views',
+        'camping': 'Camping',
+        'amazing-pools': 'Amazing Pools',
+        'castles': 'Castles',
+        'arctic': 'Arctic'
+    };
+
+    const currentCategory = categoryNames[category] || 'All Listings';
+
+    res.render("../views/listings/index.ejs", {
+        allListings: allListings,
+        currentCategory: currentCategory,
+        activeFilter: category
+    });
 };
+
+
 
 // New Form to Create new Listings.
 module.exports.newListingForm = (req, res) => {

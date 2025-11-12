@@ -11,6 +11,8 @@ const sampleListings = [
         price: 3650,
         location: "Jaipur",
         country: "India",
+        category: "trending"
+
     },
     {
         title: "Hotel in Greater Noida",
@@ -23,6 +25,7 @@ const sampleListings = [
         price: 3999,
         location: "Greater Noida",
         country: "India",
+        category: "trending"
     },
     {
         title: "Flat in Candolim",
@@ -35,6 +38,7 @@ const sampleListings = [
         price: 4500,
         location: "Goa",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Palm paradise",
@@ -47,6 +51,7 @@ const sampleListings = [
         price: 6848,
         location: "Mumbai",
         country: "India",
+        category: "amazing-views"
     },
     {
         title: "Flat in Raipur",
@@ -59,6 +64,7 @@ const sampleListings = [
         price: 2500,
         location: "Raipur",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Flat in Colva",
@@ -76,6 +82,7 @@ const sampleListings = [
         price: 5000,
         location: "Goa",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Home in Siddhi",
@@ -93,6 +100,7 @@ const sampleListings = [
         price: 7050,
         location: "Varanasi",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Trisha's House",
@@ -105,6 +113,7 @@ const sampleListings = [
         price: 1500,
         location: "Varca",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Urban Oasis",
@@ -117,6 +126,7 @@ const sampleListings = [
         price: 4000,
         location: "Bangalore",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Hilltop View Cottage",
@@ -129,6 +139,7 @@ const sampleListings = [
         price: 6500,
         location: "Manali",
         country: "India",
+        category: "amazing-views"
     },
     {
         title: "Historic Haveli Stay",
@@ -141,6 +152,7 @@ const sampleListings = [
         price: 1800,
         location: "Udaipur",
         country: "India",
+        category: "iconic-cities"
     },
     {
         title: "Riverside Retreat",
@@ -153,6 +165,7 @@ const sampleListings = [
         price: 10000,
         location: "Rishikesh",
         country: "India",
+        category: "amazing-pools"
     },
     {
         title: "Serene Beachside Villa",
@@ -165,6 +178,7 @@ const sampleListings = [
         price: 9499,
         location: "Kochi",
         country: "India",
+        category: "castles"
     },
     {
         title: "Cozy Studio in Capital",
@@ -177,6 +191,7 @@ const sampleListings = [
         price: 2200,
         location: "New Delhi",
         country: "India",
+        category: "rooms"
     },
     {
         title: "Modern Pune Apartment",
@@ -189,6 +204,7 @@ const sampleListings = [
         price: 5049,
         location: "Pune",
         country: "India",
+        category: "trending"
     },
     {
         title: "The Chennai Getaway",
@@ -201,6 +217,7 @@ const sampleListings = [
         price: 5000,
         location: "Chennai",
         country: "India",
+        category: "amazing-pools"
     },
     {
         title: "Budget Stay near Taj",
@@ -213,6 +230,7 @@ const sampleListings = [
         price: 1600,
         location: "Agra",
         country: "India",
+        category: "iconic-cities"
     },
     {
         title: "Kolkata Heritage Home",
@@ -225,6 +243,7 @@ const sampleListings = [
         price: 3000,
         location: "Kolkata",
         country: "India",
+        category: "bed-breakfasts"
     },
     {
         title: "Spacious Mountain Villa",
@@ -237,6 +256,7 @@ const sampleListings = [
         price: 4030,
         location: "Shimla",
         country: "India",
+        category: "camping"
     },
     {
         title: "Baga Beach Apartment",
@@ -249,6 +269,7 @@ const sampleListings = [
         price: 2000,
         location: "Goa",
         country: "India",
+        category: "amazing-views"
     },
 ];
 

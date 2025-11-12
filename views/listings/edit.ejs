@@ -86,7 +86,24 @@
                             required />
                         <div class="invalid-feedback">Enter valid location!</div>
                     </div>
-
+                    <div class="mb-4">
+                        <label for="category" class="form-label fw-bold">Category</label>
+                        <select
+                                name="listing[category]"
+                                id="category"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required>
+                            <option value="trending" <%= listing.category === 'trending' ? 'selected' : '' %>>Trending</option>
+                            <option value="iconic-cities" <%= listing.category === 'iconic-cities' ? 'selected' : '' %>>Iconic Cities</option>
+                            <option value="rooms" <%= listing.category === 'rooms' ? 'selected' : '' %>>Rooms</option>
+                            <option value="bed-breakfasts" <%= listing.category === 'bed-breakfasts' ? 'selected' : '' %>>Bed & Breakfasts</option>
+                            <option value="amazing-views" <%= listing.category === 'amazing-views' ? 'selected' : '' %>>Amazing Views</option>
+                            <option value="camping" <%= listing.category === 'camping' ? 'selected' : '' %>>Camping</option>
+                            <option value="amazing-pools" <%= listing.category === 'amazing-pools' ? 'selected' : '' %>>Amazing Pools</option>
+                            <option value="castles" <%= listing.category === 'castles' ? 'selected' : '' %>>Castles</option>
+                            <option value="arctic" <%= listing.category === 'arctic' ? 'selected' : '' %>>Arctic</option>
+                        </select>
+                    </div>
                     <button class="btn btn-dark w-100 fw-bold border-0 edit-listing-btn">
                         Edit
                     </button>

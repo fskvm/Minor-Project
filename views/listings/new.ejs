@@ -86,7 +86,26 @@
                             required />
                         <div class="invalid-feedback">Enter valid location!</div>
                     </div>
-
+                    <div class="mb-4">
+                        <label for="category" class="form-label fw-bold">Category</label>
+                        <select
+                                name="listing[category]"
+                                id="category"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required>
+                            <option value="">Select a category</option>
+                            <option value="trending">Trending</option>
+                            <option value="iconic-cities">Iconic Cities</option>
+                            <option value="rooms">Rooms</option>
+                            <option value="bed-breakfasts">Bed & Breakfasts</option>
+                            <option value="amazing-views">Amazing Views</option>
+                            <option value="camping">Camping</option>
+                            <option value="amazing-pools">Amazing Pools</option>
+                            <option value="castles">Castles</option>
+                            <option value="arctic">Arctic</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a category!</div>
+                    </div>
                     <button class="btn btn-primary w-100 fw-bold border-0 add-new-listing-btn">Add</button>
                 </form>
             </div>

@@ -1,76 +1,108 @@
 <% layout("layouts/boilerplate") %>
 
 <body>
+<!-- Filter Bar -->
 <div id="filter-tax-switch-container">
     <div class="filters-container">
-        <div class="filter">
+        <a href="/listings?category=trending" class="filter <%= activeFilter === 'trending' ? 'active' : '' %>">
             <i class="fa-solid fa-fire"></i>
             <small>Trending</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=iconic-cities" class="filter <%= activeFilter === 'iconic-cities' ? 'active' : '' %>">
             <i class="fa-solid fa-mountain-city"></i>
             <small>Iconic Cities</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=rooms" class="filter <%= activeFilter === 'rooms' ? 'active' : '' %>">
             <i class="fa-solid fa-bed"></i>
             <small>Rooms</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=bed-breakfasts" class="filter <%= activeFilter === 'bed-breakfasts' ? 'active' : '' %>">
             <i class="fa-solid fa-mug-hot"></i>
             <small>Bed & Breakfasts</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=amazing-views" class="filter <%= activeFilter === 'amazing-views' ? 'active' : '' %>">
             <i class="fa-solid fa-mountain-sun"></i>
             <small>Amazing Views</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=camping" class="filter <%= activeFilter === 'camping' ? 'active' : '' %>">
             <i class="fa-solid fa-campground"></i>
             <small>Camping</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=amazing-pools" class="filter <%= activeFilter === 'amazing-pools' ? 'active' : '' %>">
             <i class="fa-solid fa-person-swimming"></i>
             <small>Amazing Pools</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=castles" class="filter <%= activeFilter === 'castles' ? 'active' : '' %>">
             <i class="fa-brands fa-fort-awesome"></i>
             <small>Castles</small>
-        </div>
-        <div class="filter">
+        </a>
+        <a href="/listings?category=arctic" class="filter <%= activeFilter === 'arctic' ? 'active' : '' %>">
             <i class="fa-regular fa-snowflake"></i>
             <small>Arctic</small>
-        </div>
+        </a>
+        <a href="/listings" class="filter <%= !activeFilter ? 'active' : '' %>">
+            <i class="fa-solid fa-border-all"></i>
+            <small>All</small>
+        </a>
     </div>
 
     <div class="tax-toggle-container">
         <div class="form-check-reverse form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="texSwitchToggle()">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
         </div>
     </div>
 </div>
 
+<!-- Page Header -->
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="fw-bold"><%= currentCategory %></h2>
+        <p class="text-muted"><%= allListings.length %> properties found</p>
+    </div>
+</div>
 
-<div class="card-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+<!-- Listings Grid -->
+<div class="card-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <% if (allListings.length > 0) { %>
+        <% for (const listing of allListings) { %>
+            <div class="col">
+                <a href="/listings/<%= listing._id %>" class="listing-link">
+                    <div class="card listing-card h-100">
+                        <img
+                                src="<%= listing.image.url %>"
+                                class="card-img-top"
+                                alt="<%= listing.title %>" />
 
-    <% for (const listing of allListings) { %>
-        <div class="col">
-            <a href="/listings/<%= listing._id %>" class="listing-link">
-                <div class="card listing-card h-100">
-                    <img
-                            src="<%= listing.image.url %>"
-                            class="card-img-top"
-                            alt="Card Image" />
-
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold"><%= listing.title %></h6>
-                        <p class="card-text">
-                            &#8377;<%= listing.price.toLocaleString("en-IN") %><span> for <small>2 days</small></span>
-                            <small><i class="tax-info">&nbsp;&nbsp;&nbsp;&nbsp;+18% GST</i></small>
-                        </p>
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold"><%= listing.title %></h6>
+                            <p class="card-text text-muted mb-1">
+                                <%= listing.location %>, <%= listing.country %>
+                            </p>
+<!--                            <p class="card-text fw-bold">-->
+<!--                                &#8377;<%= listing.price.toLocaleString("en-IN") %> <span class="text-muted fw-normal">night</span>-->
+<!--                                <small><i class="tax-info">&nbsp;&nbsp;&nbsp;&nbsp;+18% GST</i></small>-->
+<!--                            </p>-->
+                            <p class="card-text fw-bold" data-base-price="<%= listing.price %>">
+    <span class="price-display">
+        ₹<%= Math.round(listing.price * 1.18).toLocaleString("en-IN") %>
+    </span>
+                                <span class="text-muted fw-normal"> night</span>
+                                <small class="tax-info" style="display: none;">
+                                    &nbsp;&nbsp;+18% GST
+                                </small>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+        <% } %>
+    <% } else { %>
+        <div class="col-12 text-center py-5">
+            <i class="fa-solid fa-house-circle-xmark fa-3x text-muted mb-3"></i>
+            <h4 class="text-muted">No listings found</h4>
+            <p class="text-muted">Try selecting a different filter or <a href="/listings">view all listings</a></p>
         </div>
     <% } %>
 </div>
