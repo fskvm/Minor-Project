@@ -1,255 +1,255 @@
+
 const sampleListings = [
-  {
-    title: "Cozy Beachfront Cottage",
-    description:
-      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
-    image: {
-      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Flat in jaipur",
+        description:
+            "Relax with the whole family at this peaceful place to stay. Location which are near by connected Patrika Gate , Airport , Fortis , EHCC Hospital, WTP Mall, GT Mall.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1529475802023754060/original/d031b903-9d48-4f5e-ace4-ad1c52af8bb9.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 3650,
+        location: "Jaipur",
+        country: "India",
     },
-    price: 1500,
-    location: "Malibu",
-    country: "United States",
-  },
-  {
-    title: "Modern Loft in Downtown",
-    description:
-      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
-    image: {
-      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Hotel in Greater Noida",
+        description:
+            "Experience comfort and sophistication at Sandane Homes, located in the heart of Greater Noida. Perfect for both business and leisure travelers, our property offers a serene ambiance with modern amenities for a truly elegant stay.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1221588138730305175/original/89a63c70-5d30-4b84-bd69-6bbca5f454f2.jpeg?im_w=960",
+            filename: "listingimage",
+        },
+        price: 3999,
+        location: "Greater Noida",
+        country: "India",
     },
-    price: 1200,
-    location: "New York City",
-    country: "United States",
-  },
-  {
-    title: "Mountain Retreat",
-    description:
-      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
-    image: {
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Flat in Candolim",
+        description:
+            "A stylish 2BHK flat just minutes from Candolim beach. Enjoy the shared pool and vibrant nightlife nearby. Perfect for a Goan getaway.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1064202134201603489/original/ae75844c-b6e9-4d84-a0b9-ffefbe3b9f1f.jpeg?im_w=960",
+            filename: "listingimage",
+        },
+        price: 4500,
+        location: "Goa",
+        country: "India",
     },
-    price: 1000,
-    location: "Aspen",
-    country: "United States",
-  },
-  {
-    title: "Historic Villa in Tuscany",
-    description:
-      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
-    image: {
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Palm paradise",
+        description:
+            "Welcome to our modern 1 BHK retreat for couples seeking relaxation. Spanning 700 sq ft, this apartment features a stylish living room with a sofa bed, dining table, and TV. Step out to the balcony to enjoy an outdoor dining area with views of lush palm trees. The kitchen is perfect for preparing meals, while the bedroom has a cute and cozy workspace . The apartment has a contemporary bathroom .",
+        image: {
+            url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+            filename: "listingimage",
+        },
+        price: 6848,
+        location: "Mumbai",
+        country: "India",
     },
-    price: 2500,
-    location: "Florence",
-    country: "Italy",
-  },
-  {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Flat in Raipur",
+        description:
+            "A cozy 2BHK home with a view straight out of a movie—watch sunsets, rainbows, and the Himalayas from your balcony overlooking a 9-hole golf course. Perfect for couples and families, it features a designated workspace with ergonomic chairs, handpicked furniture, and art. ",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1162799689258938645/original/601233d6-7b04-430c-9359-12a4e5557641.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 2500,
+        location: "Raipur",
+        country: "India",
     },
-    price: 800,
-    location: "Portland",
-    country: "United States",
-  },
-  {
-    title: "Beachfront Paradise",
-    description:
-      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
-    image: {
-      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Flat in Colva",
+        description:
+            "Relax with the whole family at this peaceful place to stay. The place is centrally located and is very easy to reach\n" +
+            "\n" +
+            "Enjoy scenic views while your stay as the property is located on the top floor in a gated society with all the amenities \n" +
+            "\n" +
+            "It’s a 5 min drive from helipad \n" +
+            "11 min drive from Max hospital",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-32191897/original/89989941-7675-4d03-8e5a-690bb363a759.jpeg?im_w=960",
+            filename: "listingimage",
+        },
+        price: 5000,
+        location: "Goa",
+        country: "India",
     },
-    price: 2000,
-    location: "Cancun",
-    country: "Mexico",
-  },
-  {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Home in Siddhi",
+        description:
+            "Relax and feel peace in you! \n" +
+            "A perfect family getaway.\n" +
+            "Come and stay with us to feel even better than at home.\n" +
+            "Enjoy the uninterrupted wifi connectivity with a complete power back up..\n" +
+            "Come in as guests & Leave as family.\n" +
+            "Accommodating your peace of mind in the cozy AC apartment!Prepare a quick snack or head out to the beach shacks..Jump in the pool or have a dip in d sea",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1416218658339451756/original/89d0d0f7-26fa-4a37-8410-53cc33d28b5b.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 7050,
+        location: "Varanasi",
+        country: "India",
     },
-    price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
-  },
-  {
-    title: "Luxury Penthouse with City Views",
-    description:
-      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
-    image: {
-      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Trisha's House",
+        description:
+            "Relax with the whole family and friends at this peaceful private stay with a power back up.we prioritise in cleanliness and peace.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1483896254153157804/original/b74004ea-5b23-4d75-9875-72d0111b7b1e.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 1500,
+        location: "Varca",
+        country: "India",
     },
-    price: 3500,
-    location: "Los Angeles",
-    country: "United States",
-  },
-  {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Urban Oasis",
+        description:
+            "A modern, stylish apartment in the heart of the city. Close to all major tech parks and restaurants. Includes high-speed Wi-Fi and a dedicated workspace.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1413858431883771385/original/1b106e35-1218-4e67-9f83-7d55e739c9ab.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 4000,
+        location: "Bangalore",
+        country: "India",
     },
-    price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
-  },
-  {
-    title: "Safari Lodge in the Serengeti",
-    description:
-      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
-    image: {
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Hilltop View Cottage",
+        description:
+            "Escape to this cozy cottage in the mountains. Enjoy breathtaking views of the Himalayas and serene nature walks. Perfect for a digital detox.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1501526053920514530/original/16527f80-ffc6-4735-888d-2ddf8d01e6ca.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 6500,
+        location: "Manali",
+        country: "India",
     },
-    price: 4000,
-    location: "Serengeti National Park",
-    country: "Tanzania",
-  },
-  {
-    title: "Historic Canal House",
-    description:
-      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
-    image: {
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Historic Haveli Stay",
+        description:
+            "Experience royalty in this restored heritage haveli. Centrally located near the city palace and lakes. A blend of traditional decor and modern amenities.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1270314768198309910/original/c389f712-5665-4b38-b83b-29f9b8fd73d0.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 1800,
+        location: "Udaipur",
+        country: "India",
     },
-    price: 1800,
-    location: "Amsterdam",
-    country: "Netherlands",
-  },
-  {
-    title: "Private Island Retreat",
-    description:
-      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
-    image: {
-      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Riverside Retreat",
+        description:
+            "A peaceful retreat by the banks of the Ganges. Ideal for yoga and meditation. Listen to the river and find your inner peace.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA0MTI4OTcyMDUwMjI5Mjg3Nw%3D%3D/original/f5da9ddb-d67d-4074-8a4f-4bdcc8f4c1c0.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 10000,
+        location: "Rishikesh",
+        country: "India",
     },
-    price: 10000,
-    location: "Fiji",
-    country: "Fiji",
-  },
-  {
-    title: "Charming Cottage in the Cotswolds",
-    description:
-      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
-    image: {
-      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Serene Beachside Villa",
+        description:
+            "Just steps away from the Arabian Sea. This villa offers a private garden and a quiet beach experience, away from the crowds.",
+        image: {
+            url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+            filename: "listingimage",
+        },
+        price: 9499,
+        location: "Kochi",
+        country: "India",
     },
-    price: 1200,
-    location: "Cotswolds",
-    country: "United Kingdom",
-  },
-  {
-    title: "Historic Brownstone in Boston",
-    description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
-    image: {
-      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Cozy Studio in Capital",
+        description:
+            "A compact and comfortable studio in a safe, central neighborhood. Perfect for solo travelers or couples. Metro station is a 5-min walk.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/miso/Hosting-1324634048017973139/original/a0a50c97-837e-40e4-96bc-beff299d56d3.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 2200,
+        location: "New Delhi",
+        country: "India",
     },
-    price: 2200,
-    location: "Boston",
-    country: "United States",
-  },
-  {
-    title: "Beachfront Bungalow in Bali",
-    description:
-      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
-    image: {
-      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Modern Pune Apartment",
+        description:
+            "Located in a bustling tech hub, this apartment is perfect for business travelers. Features a gym, pool, and 24/7 security.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/974fbc11-c5a7-405b-8557-94eb387aa15d.jpg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 5049,
+        location: "Pune",
+        country: "India",
     },
-    price: 1800,
-    location: "Bali",
-    country: "Indonesia",
-  },
-  {
-    title: "Mountain View Cabin in Banff",
-    description: "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
-    image: {
-      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "The Chennai Getaway",
+        description:
+            "Enjoy the sea breeze from this beautiful apartment near Marina Beach. Authentic South Indian breakfast included.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1461931001954381576/original/6973ded6-1a4e-43f6-acf6-6ed554ec46aa.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 5000,
+        location: "Chennai",
+        country: "India",
     },
-    price: 1500,
-    location: "Banff",
-    country: "Canada",
-  },
-  {
-    title: "Art Deco Apartment in Miami",
-    description:
-      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
-    image: {
-      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Budget Stay near Taj",
+        description:
+            "A clean, simple, and affordable room with a private bath. Located just 1km from the Taj Mahal. Perfect for backpackers.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 1600,
+        location: "Agra",
+        country: "India",
     },
-    price: 1600,
-    location: "Miami",
-    country: "United States",
-  },
-  {
-    title: "Tropical Villa in Phuket",
-    description:
-      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
-    image: {
-      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Kolkata Heritage Home",
+        description:
+            "Step back in time in this colonial-era building. Enjoy the blend of history and comfort in the 'City of Joy'.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/miso/Hosting-9900374/original/8a3b4ce3-3b21-4194-b3d1-454d5cd3bbed.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 3000,
+        location: "Kolkata",
+        country: "India",
     },
-    price: 3000,
-    location: "Phuket",
-    country: "Thailand",
-  },
-  {
-    title: "Historic Castle in Scotland",
-    description:
-      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
-    image: {
-      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Spacious Mountain Villa",
+        description:
+            "A large 4-bedroom villa perfect for families or groups. Features a fireplace, a large garden, and stunning views of the valley.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1259297390000577733/original/4a3a976e-8b25-4b16-9964-883fe30f84fe.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 4030,
+        location: "Shimla",
+        country: "India",
     },
-    price: 4000,
-    location: "Scottish Highlands",
-    country: "United Kingdom",
-  },
-  {
-    title: "Desert Oasis in Dubai",
-    description:
-      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
-    image: {
-      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
+    {
+        title: "Baga Beach Apartment",
+        description:
+            "Live right in the action. This apartment is on the main Baga-Calangute road, seconds from the beach, shacks, and nightlife.",
+        image: {
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTgzMzE3Njc4OTg2NzM2OTE4/original/17ff1028-83fa-442a-b1d3-0392db2c24e8.jpeg?im_w=1200",
+            filename: "listingimage",
+        },
+        price: 2000,
+        location: "Goa",
+        country: "India",
     },
-    price: 5000,
-    location: "Dubai",
-    country: "United Arab Emirates",
-  },
-  {
-    title: "Rustic Log Cabin in Montana",
-    description:
-      "Unplug and relax in this rustic log cabin surrounded by nature. Perfect for a quiet retreat.",
-    image: {
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-      filename: "listingimage",
-    },
-    price: 1200,
-    location: "Yellowstone",
-    country: "United States",
-  },
 ];
 
 module.exports = { data: sampleListings };

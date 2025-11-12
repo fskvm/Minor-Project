@@ -1,17 +1,22 @@
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
-  flex: 1;
+    flex: 1;
 }
 
 /* Navbar */
 .navbar {
-  height: 5rem;
+    height: 5rem;
 }
 
 .navbar-logo {
@@ -21,42 +26,42 @@ body {
 }
 
 .nav-link {
-  color: #222222;
+    color: #222222;
 }
 
 .search-box {
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0.1rem 0.1rem lightgray;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.1rem 0.1rem lightgray;
 }
 .search-box:hover {
-  border-color: lightgray;
-  box-shadow: 0 0 0.1rem 0.1rem lightgray;
-  background-color: #ebebeb;
+    border-color: lightgray;
+    box-shadow: 0 0 0.1rem 0.1rem lightgray;
+    background-color: #ebebeb;
 }
 .search-box:focus {
-  border-color: lightgray;
-  box-shadow: 0 0 0.1rem 0.1rem lightgray;
-  background-color: initial;
+    border-color: lightgray;
+    box-shadow: 0 0 0.1rem 0.1rem lightgray;
+    background-color: initial;
 }
 .search-box::placeholder {
-  font-size: small;
-  color: gray;
+    font-size: small;
+    color: gray;
 }
 
 .search-btn {
-  border: 1px solid lightgray;
-  border-radius: 1.25rem;
-  display: flex;
-  align-items: center;
-  color: white;
-  background-color: #144272;
-  padding: 0.5rem 0.75rem;
+    border: 1px solid lightgray;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #144272;
+    padding: 0.5rem 0.75rem;
 }
-.search-btn:focus, .fa-magnifying-glass:focus {
-  color: #144272;
-  background-color: white;
+.search-btn:focus,
+.fa-magnifying-glass:focus {
+    color: #144272;
+    background-color: white;
 }
-
 
 .navbar-nav.fw-bold.ms-auto {
     display: flex;
@@ -99,88 +104,188 @@ body {
     border-radius: 0;
 }
 
-
 /* Footer */
 .foot-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #ebebeb;
-  height: auto;
-  text-align: center;
-  padding: 1rem 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+    height: auto;
+    text-align: center;
+    padding: 1rem 0 1.5rem;
 }
 
 .foot-info-socials,
 .foot-info-links {
-  width: 100%;
+    width: 100%;
 }
 
 .foot-info-socials i {
-  font-size: 1.25rem;
-  margin: 0.5rem;
+    font-size: 1.25rem;
+    margin: 0.5rem;
 }
 
 .foot-info-links a {
-  text-decoration: none;
-  color: #222222;
+    text-decoration: none;
+    color: #222222;
 }
 
 .foot-info-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Cards */
 .listing-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .listing-card {
-  border: none !important;
-  margin: 0 0.75rem 1rem;
-  padding: 0;
+    border: none !important;
+    /* margin: 0 0.75rem 1rem; <-- This is removed, 'g-4' on the row handles spacing */
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Modern Hover for Index Page Cards */
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card-img-top {
-  border-radius: 0.75rem !important;
-  width: 100% !important;
-  object-fit: cover !important;
+    border-radius: 0.75rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 15rem; /* Set a consistent height */
 }
 
-.card-body {
-  padding: 0 !important;
-}
+/*
+ *
+ * FIX #3: THE RULE '.card-body { padding: 0 !important; }' WAS HERE.
+ * IT HAS BEEN DELETED.
+ * Bootstrap's default .card-body padding will now apply,
+ * giving you the spacing you wanted.
+ *
+ */
 
 .card-text {
-  font-weight: 600 !important;
+    font-weight: 600 !important;
 }
 
 .card-text span {
-  font-weight: normal !important;
+    font-weight: normal !important;
 }
 
 /* Card Overlay Effect on Card */
 .card-img-overlay {
-  opacity: 0;
+    opacity: 0;
 }
 
 .card-img-overlay:hover {
-  opacity: 0.25;
-  background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.25;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Add New Listing Form */
 .add-new-listing-btn {
-  background-color: #144272 !important;
+    background-color: #144272 !important;
 }
 
 /* Edit Listing Form */
 .edit-listing-btn {
-  background-color: #144272 !important;
+    background-color: #144272 !important;
 }
 
-/* Show Listing Page */
+/* ================== */
+/* SHOW PAGE STYLES */
+/* ================== */
 .show-img {
-  height: 30dvh;
+    height: 55vh;
+}
+
+/* Show Page - Review Form Card */
+.review-form-card {
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+/* Show Page - Review Cards */
+.review-card {
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Subtle Hover for Show Page Review Cards */
+.review-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.review-author {
+    font-weight: 700;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-rating .star-filled {
+    fill: #ffc107; /* Gold color */
+}
+
+.review-rating .star-empty {
+    fill: #e0e0e0; /* Light gray */
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Filter Bar & Tax Toggle */
+#filter-tax-switch-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filters-container {
+    display: flex;
+    gap: 1.5rem; /* Spacing between icons */
+    overflow-x: auto; /* Allows horizontal scroll on small screens */
+    padding: 1rem 0;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+.filter:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+.filter i {
+    font-size: 1.25rem;
+}
+
+.tax-toggle-container {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
