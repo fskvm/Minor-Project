@@ -17,7 +17,7 @@ const sampleListings = [
         description:
             "Experience comfort and sophistication at Sandane Homes, located in the heart of Greater Noida. Perfect for both business and leisure travelers, our property offers a serene ambiance with modern amenities for a truly elegant stay.",
         image: {
-            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1221588138730305175/original/89a63c70-5d30-4b84-bd69-6bbca5f454f2.jpeg?im_w=960",
+            url: "https://a0.muscache.com/im/pictures/hosting/Hosting-1333793049037200315/original/33c2cb40-52e8-4ff1-bcf3-7b83033cb18e.jpeg?im_w=1200",
             filename: "listingimage",
         },
         price: 3999,

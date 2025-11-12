@@ -1,37 +1,86 @@
 #filter-tax-switch-container {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: nowrap; /* Explicitly prevent wrapping */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin: 2rem 0;
+    gap: 1.5rem; /* Adds space between the filters and the tax switch */
 }
 
-.filter {
-    display: inline-block;
-    margin: 0 1rem;
-    text-align: center;
-    opacity: 0.75;
+/* 2. Filters list:
+   - 'min-width: 0' is the magic fix. It allows this container to
+     shrink, which then enables its own scrollbar.
+*/
+.filters-container {
+    display: flex;
+    flex-grow: 1; /* Take up all available space */
+    flex-shrink: 1; /* Allow it to shrink */
+    min-width: 0; /* !! THIS IS THE FIX !! */
+
+    overflow-x: auto; /* Make it scroll horizontally */
+    overflow-y: hidden;
+    padding-bottom: 8px; /* Room for the hover effect */
+
+    /* Hide scrollbar for a cleaner look */
+    &::-webkit-scrollbar { display: none; }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-.filter:hover {
-    opacity: initial;
+
+/* 3. Individual filter items:
+   - Modern hover: lifts up and gets an underline.
+*/
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.75rem;
+    text-align: center;
+    opacity: 0.7;
     cursor: pointer;
+    border-bottom: 2px solid transparent; /* Prepare the hover underline */
+    transition: all 0.2s ease;
+}
+
+.filter:hover {
+    opacity: 1;
+    transform: translateY(-2px); /* Slight lift effect */
+    border-bottom-color: #222; /* Add the underline on hover */
 }
 
 .filter small {
     display: block;
+    white-space: nowrap; /* Keeps "Iconic Cities" on one line */
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
 }
 
+/* 4. Tax toggle container:
+   - 'flex-shrink: 0' prevents this from being squished.
+*/
 .tax-toggle-container {
+    flex-shrink: 0; /* Do not let this container shrink */
     display: flex;
     align-items: center;
-    border: solid 0.1px lightgray;
-    border-radius: 0.5rem;
-    padding: 0.25rem 1rem;
-}
-.tax-toggle-container:hover {
-    border-color: initial;
+    border: solid 1px #ddd;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
+.tax-toggle-container:hover {
+    border-color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 5. Your original helper styles */
 .form-check-label {
     font-size: small;
     font-weight: bold;
+    white-space: nowrap; /* Keep this on one line */
 }
 
 .tax-info {

@@ -54,12 +54,12 @@ body {
     display: flex;
     align-items: center;
     color: white;
-    background-color: #144272;
+    background-color: #0c3662;
     padding: 0.5rem 0.75rem;
 }
 .search-btn:focus,
 .fa-magnifying-glass:focus {
-    color: #144272;
+    color: #0c3662;
     background-color: white;
 }
 
@@ -78,7 +78,7 @@ body {
     overflow: hidden;
     letter-spacing: 2px;
     text-decoration: none;
-    color: #144272;
+    color: #0c3662;
     z-index: 9;
 }
 
@@ -104,37 +104,80 @@ body {
     border-radius: 0;
 }
 
-/* Footer */
+footer {
+    background-color: #0c3662; /* Modern dark background */
+    color: #f0f0f0;         /* Light text for contrast */
+    padding: 2.5rem 5%;     /* Generous padding (5% left/right) */
+    margin-top: 3rem;       /* Space from content above */
+}
+
 .foot-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: space-between; /* Pushes left/right sections apart */
     align-items: center;
-    background-color: #ebebeb;
-    height: auto;
-    text-align: center;
-    padding: 1rem 0 1.5rem;
+    gap: 2rem;       /* Space between items if they wrap */
 }
 
-.foot-info-socials,
+.footer-left {
+    display: flex;
+    flex-wrap: wrap; /* Allow copyright and links to wrap */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-left span {
+    color: #aaa; /* Slightly muted copyright text */
+}
+
 .foot-info-links {
-    width: 100%;
-}
-
-.foot-info-socials i {
-    font-size: 1.25rem;
-    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem; /* Space between individual links */
 }
 
 .foot-info-links a {
     text-decoration: none;
-    color: #222222;
+    color: #f0f0f0;
+    transition: color 0.2s ease;
 }
 
 .foot-info-links a:hover {
+    color: #fff;
     text-decoration: underline;
 }
 
+/* Social Icons Styling */
+.foot-info-socials {
+    display: flex;
+    gap: 1.25rem; /* Space between icons */
+}
+
+.foot-info-socials a {
+    color: #f0f0f0;
+    font-size: 1.5rem; /* Make icons a bit bigger */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.foot-info-socials a:hover {
+    color: #fff; /* Brighten on hover */
+    transform: translateY(-2px); /* Modern "lift" effect */
+}
+
+/* Responsive handling for mobile */
+@media (max-width: 768px) {
+    .foot-info {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;    /* Center-align on mobile */
+    }
+
+    .footer-left {
+        flex-direction: column; /* Stack copyright and links */
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+}
 /* Cards */
 .listing-link {
     text-decoration: none;
@@ -160,14 +203,6 @@ body {
     height: 15rem; /* Set a consistent height */
 }
 
-/*
- *
- * FIX #3: THE RULE '.card-body { padding: 0 !important; }' WAS HERE.
- * IT HAS BEEN DELETED.
- * Bootstrap's default .card-body padding will now apply,
- * giving you the spacing you wanted.
- *
- */
 
 .card-text {
     font-weight: 600 !important;
@@ -189,12 +224,12 @@ body {
 
 /* Add New Listing Form */
 .add-new-listing-btn {
-    background-color: #144272 !important;
+    background-color: #0c3662 !important;
 }
 
 /* Edit Listing Form */
 .edit-listing-btn {
-    background-color: #144272 !important;
+    background-color: #0c3662 !important;
 }
 
 /* ================== */
@@ -288,4 +323,65 @@ body {
     border: 1px solid #ddd;
     border-radius: 0.75rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.flash-premium,
+.flash-premium-error {
+    /* This makes it float */
+    position: fixed;
+    top: 80px; /* Sits below the navbar */
+    right: 25px;
+    z-index: 1050; /* Sits on top of other content */
+
+    /* This adds the "premium" shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+    /* Nicer colors and borders */
+    border-width: 1px;
+    border-style: solid;
+
+    /* Sizing */
+    width: auto; /* Auto-width based on content */
+    min-width: 300px; /* Keeps it from being too small */
+}
+
+.flash-premium {
+    background-color: #d1e7dd; /* Lighter green */
+    color: #0f5132;
+    border-color: #a3c2a8;
+}
+
+.flash-premium-error {
+    background-color: #f8d7da; /* Lighter red */
+    color: #58151c;
+    border-color: #f1aeb5;
+}
+
+
+.btn-back-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;  /* 44px */
+    height: 2.75rem; /* 44px */
+
+    font-size: 1.25rem; /* Makes the icon a good size */
+    color: #444; /* Dark grey icon */
+    background-color: #f8f9fa; /* Light grey bg */
+    border: 1px solid #ddd;
+    border-radius: 50%; /* This makes it round */
+    text-decoration: none;
+
+    /* Effects */
+    transition: all 0.2s ease;
+}
+
+.btn-back-icon:hover {
+    background-color: #e9ecef; /* Slightly darker grey */
+    border-color: #ccc;
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
 }
