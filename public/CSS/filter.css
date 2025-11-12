@@ -44,6 +44,10 @@
     border-bottom: 2px solid transparent; /* Prepare the hover underline */
     transition: all 0.2s ease;
 }
+.filter i {
+    font-size: 1.25rem;
+    color: #0c3662;
+}
 
 .filter:hover {
     opacity: 1;
