@@ -80,15 +80,11 @@
                             <p class="card-text text-muted mb-1">
                                 <%= listing.location %>, <%= listing.country %>
                             </p>
-<!--                            <p class="card-text fw-bold">-->
-<!--                                &#8377;<%= listing.price.toLocaleString("en-IN") %> <span class="text-muted fw-normal">night</span>-->
-<!--                                <small><i class="tax-info">&nbsp;&nbsp;&nbsp;&nbsp;+18% GST</i></small>-->
-<!--                            </p>-->
                             <p class="card-text fw-bold" data-base-price="<%= listing.price %>">
     <span class="price-display">
         ₹<%= Math.round(listing.price * 1.18).toLocaleString("en-IN") %>
     </span>
-                                <span class="text-muted fw-normal"> night</span>
+                                <span class="text-muted fw-normal"> for 2 nights</span>
                                 <small class="tax-info" style="display: none;">
                                     &nbsp;&nbsp;+18% GST
                                 </small>
